@@ -15,7 +15,10 @@ Vue.use(VueI18n)
 // 设置为 false 以阻止 vue 在启动时生成生产提示.
 Vue.config.productionTip = false
 
-localStorage.primaryColor = '#409eff'
+if (localStorage.primaryColor) {
+  localStorage.primaryColor = '#409eff'
+};
+console.log(localStorage.primaryColor)
 
 /*  以下内容为多语言设置  */
 // 设置当前语言默认值--localStorage
